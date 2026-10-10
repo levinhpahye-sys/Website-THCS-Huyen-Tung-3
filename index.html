@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRƯỜNG THCS HUYỀN TỤNG – CỔNG HỌC TẬP & GIÁO DỤC AN TOÀN</title>
+  <meta name="description" content="Học an toàn – Sống văn minh – Ứng xử đẹp. Cổng học tập trực tuyến dành riêng cho học sinh Trường THCS Huyền Tụng.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col relative">
+
+  <!-- SUBTLE SCHOOL WATERMARK BACKGROUND -->
+  <div class="fixed inset-0 z-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-[0.06] filter grayscale-[20%]" style="background-image: url('public/images/truong-thcs-huyen-tung.jpg');"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm py-3 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Logo + School Name -->
+      <a href="index.html" class="flex items-center gap-3 group text-left">
+        <div class="h-11 w-11 rounded-xl bg-gradient-to-tr from-blue-700 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+        </div>
+        <div>
+          <div class="font-extrabold text-blue-900 text-base sm:text-lg leading-tight uppercase group-hover:text-blue-700 transition-colors">
+            TRƯỜNG THCS HUYỀN TỤNG
+          </div>
+          <div class="text-[11px] sm:text-xs font-semibold text-slate-500 tracking-wide">
+            CỔNG HỌC TẬP – KỸ NĂNG – GIÁO DỤC AN TOÀN
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium">
+        <a href="#hero" class="px-3 py-1.5 rounded-lg text-blue-700 bg-blue-50 font-semibold">Trang chủ</a>
+        <a href="#categories" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Danh mục</a>
+        <a href="#videos" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Video tình huống</a>
+        <a href="#lessons" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Bài giảng</a>
+        <a href="#about" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">Giới thiệu</a>
+      </nav>
+
+      <!-- CTA & Login -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleLoginModal()" class="px-3 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-blue-700 hover:bg-slate-50 transition-colors">
+          Đăng nhập Admin
+        </button>
+        <a href="#lessons" class="flex items-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-800 hover:to-indigo-700 shadow-md shadow-blue-600/25 hover:scale-[1.02] transition-all">
+          <span>🎓 HỌC NGAY</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative overflow-hidden text-white bg-slate-950 min-h-[480px] sm:min-h-[520px] flex items-center">
+    <div class="absolute inset-0 z-0 bg-cover bg-no-repeat" style="background-image: url('images/truong-thcs-huyen-tung.jpg'); background-position: center 15%;">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-blue-950/70 to-slate-950/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/20"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10 sm:pt-12 sm:pb-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        <!-- Left Text (7 cols) -->
+        <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-blue-200">
+            <span>✨ CỔNG HỌC TẬP TRỰC TUYẾN CHÍNH THỨC • THCS HUYỀN TỤNG</span>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight uppercase">
+            <span class="text-white block drop-shadow-md">HỌC AN TOÀN – SỐNG VĂN MINH – ỨNG XỬ ĐẸP</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-blue-100/90 leading-relaxed max-w-2xl font-normal">
+            Không gian học tập và rèn luyện kỹ năng qua tình huống thực tế dành cho học sinh THCS Huyền Tụng: An toàn giao thông, văn hóa ứng xử, phòng chống bạo lực và kỹ năng sống.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
+            <a href="#lessons" class="flex items-center gap-2 px-6 py-2.5 rounded-xl font-extrabold text-sm text-blue-950 bg-white hover:bg-blue-50 shadow-lg shadow-blue-950/40 hover:scale-[1.02] transition-all">
+              <span>📖 XEM BÀI GIẢNG</span>
+            </a>
+            <a href="#videos" class="flex items-center gap-2 px-6 py-2.5 rounded-xl font-extrabold text-sm text-white bg-blue-600/90 hover:bg-blue-600 border border-white/20 backdrop-blur-md shadow-lg hover:scale-[1.02] transition-all">
+              <span>🎬 KHÁM PHÁ TÌNH HUỐNG</span>
+            </a>
+          </div>
+
+          <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-blue-200">
+            <span>✓ 100% Video Tình Huống Thực Tế</span>
+            <span>✓ Thân Thiện Với Học Sinh THCS</span>
+            <span>✓ Học Tập Không Cần Đăng Nhập</span>
+          </div>
+        </div>
+
+        <!-- Right School Photo Showcase (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-900/60 backdrop-blur-md group">
+              <img src="images/truong-thcs-huyen-tung.jpg" alt="Cổng trường THCS Huyền Tụng" class="w-full h-56 sm:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/10 text-white text-xs flex items-center justify-between">
+                <div>
+                  <div class="font-bold text-white text-xs">Cổng Trường THCS Huyền Tụng</div>
+                  <div class="text-[11px] text-blue-300 mt-0.5">Thầy cô & học sinh thân thiện</div>
+                </div>
+                <span class="px-2 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-[10px] font-bold border border-emerald-500/30">
+                  Ngôi trường hạnh phúc
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES SECTION -->
+  <section id="categories" class="py-8 sm:py-10 bg-white/80 backdrop-blur-sm border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
+        <div>
+          <div class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-1">
+            🗂️ Chủ đề giáo dục trọng tâm
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 uppercase tracking-tight">
+            DANH MỤC BÀI HỌC VÀ KỸ NĂNG
+          </h2>
+        </div>
+        <p class="text-xs text-slate-500 max-w-md sm:text-right">
+          6 nhóm kỹ năng sống & an toàn học đường thiết yếu dành cho học sinh THCS.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- 1. Giao thông -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">🚦</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">An toàn giao thông</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Quy tắc đi xe đạp điện, đội mũ bảo hiểm đạt chuẩn và tránh điểm mù xe tải.</p>
+          </div>
+        </a>
+
+        <!-- 2. Đạo đức -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">🤝</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">Đạo đức – Ứng xử học đường</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Lễ phép với thầy cô, tôn trọng bạn bè, xây dựng môi trường học đường thân thiện.</p>
+          </div>
+        </a>
+
+        <!-- 3. Bạo lực học đường -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-rose-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">🛡️</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">Phòng chống bạo lực học đường</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Nhận diện các hình thức bạo lực, kỹ năng tự vệ tâm lý và phương pháp xử lý khi bị bắt nạt.</p>
+          </div>
+        </a>
+
+        <!-- 4. Kỹ năng sống -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-amber-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">❤️</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">Kỹ năng sống & Sinh tồn</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Thoát hiểm hỏa hoạn, phòng chống đuối nước vùng sông suối Bắc Kạn, sơ cấp cứu chấn thương.</p>
+          </div>
+        </a>
+
+        <!-- 5. An toàn mạng -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">📱</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">An toàn môi trường mạng</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Bảo mật thông tin cá nhân, phòng tránh lừa đảo, ứng xử văn minh trên Facebook/TikTok.</p>
+          </div>
+        </a>
+
+        <!-- 6. Văn hóa học đường -->
+        <a href="#lessons" class="group p-4 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all flex items-start gap-3.5 hover:-translate-y-0.5">
+          <div class="w-12 h-12 rounded-xl bg-teal-50 text-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">🏫</div>
+          <div class="flex-1 min-w-0">
+            <h3 class="text-sm font-bold text-slate-900 group-hover:text-blue-700 uppercase truncate">Văn hóa học đường</h3>
+            <p class="mt-1 text-xs text-slate-500 line-clamp-2">Nề nếp trường lớp, giữ gìn tài sản chung, bảo vệ môi trường xanh – sạch – đẹp.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SITUATIONS SECTION -->
+  <section id="videos" class="py-8 sm:py-12 border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
+        <div>
+          <div class="text-rose-600 text-xs font-bold uppercase tracking-wider mb-1">
+            🎬 Nội dung trực quan trọng tâm
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight uppercase">
+            TÌNH HUỐNG HỌC ĐƯỜNG THỰC TẾ
+          </h2>
+        </div>
+        <span class="text-xs font-semibold text-slate-500">8 Video Tình Huống Sẵn Sàng</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Video 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-44 bg-slate-900 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/n33Zp5m_T5E', 'Tình huống 01: Đi xe đạp điện khi chưa đủ tuổi & không đội mũ bảo hiểm')">
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-slate-950/20 flex items-center justify-center">
+                <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">▶</div>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-slate-950/80 text-white text-[10px] font-semibold px-2 py-0.5 rounded">04:15</span>
+              <span class="absolute top-2 left-2 bg-white/95 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">🚦 Giao thông</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Tình huống 01: Đi xe đạp điện khi chưa đủ tuổi và không đội mũ bảo hiểm</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Học sinh lớp 7 mượn xe đạp điện phóng nhanh vượt đèn vàng và không cài quai mũ.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="openVideoModal('https://www.youtube.com/embed/n33Zp5m_T5E', 'Tình huống 01: Đi xe đạp điện khi chưa đủ tuổi')" class="w-full py-2 bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 text-xs font-bold rounded-xl transition-colors">
+              Xem video tình huống
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-44 bg-slate-900 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Tình huống 02: Ứng xử khi xảy ra mâu thuẫn trong giờ ra chơi')">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-slate-950/20 flex items-center justify-center">
+                <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">▶</div>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-slate-950/80 text-white text-[10px] font-semibold px-2 py-0.5 rounded">03:45</span>
+              <span class="absolute top-2 left-2 bg-white/95 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">🤝 Đạo đức</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Tình huống 02: Ứng xử khi xảy ra va chạm, mâu thuẫn giờ ra chơi</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Va chạm vô ý làm đổ cốc nước, giải quyết bằng lời xin lỗi thay vì nổi nóng dùng nắm đấm.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Tình huống 02: Ứng xử khi va chạm giờ ra chơi')" class="w-full py-2 bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 text-xs font-bold rounded-xl transition-colors">
+              Xem video tình huống
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-44 bg-slate-900 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/fW8amMCVAJQ', 'Tình huống 03: Nói xấu, bôi nhọ danh dự bạn bè trên mạng xã hội')">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-slate-950/20 flex items-center justify-center">
+                <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">▶</div>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-slate-950/80 text-white text-[10px] font-semibold px-2 py-0.5 rounded">05:20</span>
+              <span class="absolute top-2 left-2 bg-white/95 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">📱 Mạng xã hội</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Tình huống 03: Nói xấu, bôi nhọ danh dự bạn bè trên Facebook</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Chụp lén ảnh bạn đăng lên mạng chế giễu và hậu quả tổn thương tâm lý khôn lường.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="openVideoModal('https://www.youtube.com/embed/fW8amMCVAJQ', 'Tình huống 03: Bạo lực mạng xã hội')" class="w-full py-2 bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 text-xs font-bold rounded-xl transition-colors">
+              Xem video tình huống
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-44 bg-slate-900 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/kJQP7kiw5Fk', 'Tình huống 04: Cách ứng xử khi chứng kiến bạn bị bắt nạt')">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-slate-950/20 flex items-center justify-center">
+                <div class="w-11 h-11 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">▶</div>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-slate-950/80 text-white text-[10px] font-semibold px-2 py-0.5 rounded">06:10</span>
+              <span class="absolute top-2 left-2 bg-white/95 text-slate-800 text-[10px] font-bold px-2 py-0.5 rounded-full">🛡️ Phòng chống bạo lực</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Tình huống 04: Cách ứng xử khi chứng kiến bạn bị bắt nạt, cô lập</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Không im lặng tiếp tay, dũng cảm báo cáo thầy cô giáo và hỗ trợ bạn hòa nhập.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="openVideoModal('https://www.youtube.com/embed/kJQP7kiw5Fk', 'Tình huống 04: Ứng xử khi bạn bị bắt nạt')" class="w-full py-2 bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 text-xs font-bold rounded-xl transition-colors">
+              Xem video tình huống
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS SECTION -->
+  <section id="lessons" class="py-8 sm:py-12 bg-white/80 backdrop-blur-sm border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
+        <div>
+          <div class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-1">
+            📚 Tuyên truyền & Giáo dục
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight uppercase">
+            BÀI GIẢNG KỸ NĂNG & AN TOÀN TIÊU BIỂU
+          </h2>
+        </div>
+        <span class="text-xs font-semibold text-slate-500">Đầy đủ mục tiêu & thông điệp ghi nhớ</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Lesson 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <span class="absolute top-2 left-2 bg-white/95 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">🚦 An toàn giao thông</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Quy định an toàn khi học sinh THCS đi xe đạp điện</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Độ tuổi sử dụng xe đạp điện, quy tắc đội mũ bảo hiểm và cách xử lý tại ngã tư.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="alert('Mở bài giảng An toàn xe đạp điện! Trong phiên bản đầy đủ chạy với Node.js, bạn sẽ được chuyển tới trang chi tiết kèm hộp tương tác: Em sẽ làm gì?')" class="w-full py-2 bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors">
+              Vào học bài giảng →
+            </button>
+          </div>
+        </div>
+
+        <!-- Lesson 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <span class="absolute top-2 left-2 bg-white/95 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">🤝 Đạo đức</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Văn hóa chào hỏi và ứng xử chuẩn mực với thầy cô, bạn bè</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Chào hỏi lễ phép, xưng hô lịch sự, tôn trọng sự khác biệt để xây dựng lớp học hạnh phúc.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="alert('Mở bài giảng Văn hóa chào hỏi!')" class="w-full py-2 bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors">
+              Vào học bài giảng →
+            </button>
+          </div>
+        </div>
+
+        <!-- Lesson 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <span class="absolute top-2 left-2 bg-white/95 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">❤️ Kỹ năng sống</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Kỹ năng thoát hiểm an toàn khi xảy ra hỏa hoạn</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Quy tắc cúi thấp người bò sát sàn, bịt khăn ướt, không dùng thang máy và gọi 114.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="alert('Mở bài giảng Thoát hiểm hỏa hoạn!')" class="w-full py-2 bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors">
+              Vào học bài giảng →
+            </button>
+          </div>
+        </div>
+
+        <!-- Lesson 4 -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-slate-100 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover">
+              <span class="absolute top-2 left-2 bg-white/95 text-[10px] font-bold px-2 py-0.5 rounded-full shadow">❤️ Phòng đuối nước</span>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 line-clamp-2">Phòng chống đuối nước vùng sông suối Bắc Kạn</h4>
+              <p class="text-xs text-slate-500 mt-1 line-clamp-2">Không tắm thác suối tự do, kỹ thuật cứu bạn đuối nước gián tiếp bằng sào/phao nổi.</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0">
+            <button onclick="alert('Mở bài giảng Phòng chống đuối nước!')" class="w-full py-2 bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold rounded-xl transition-colors">
+              Vào học bài giảng →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLEDGE BANNER -->
+  <section class="py-7 bg-gradient-to-r from-slate-950 via-blue-950 to-indigo-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="text-amber-300 text-xs font-bold uppercase tracking-wider mb-0.5">⭐ KHẨU HIỆU HÀNH ĐỘNG HỌC SINH</div>
+        <h3 class="text-lg sm:text-xl font-black uppercase text-white">HỌC AN TOÀN – SỐNG VĂN MINH – ỨNG XỬ ĐẸP</h3>
+      </div>
+      <div class="flex items-center gap-4 text-xs text-blue-200">
+        <span>🛡️ 100% An Toàn Học Đường</span>
+        <span>•</span>
+        <span>❤️ Tôn Trọng Thầy Cô & Bạn Bè</span>
+        <span>•</span>
+        <span>📱 Văn Hóa Không Gian Số</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about" class="bg-slate-900 text-slate-300 pt-10 pb-6 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-xs">
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase mb-2">TRƯỜNG THCS HUYỀN TỤNG</h4>
+          <p class="text-slate-400 leading-relaxed mb-3">Cổng học tập trực tuyến, bồi dưỡng kỹ năng sống và giáo dục an toàn học đường chính thức của nhà trường.</p>
+          <div class="text-amber-400 font-bold">Khẩu hiệu: HỌC AN TOÀN – SỐNG VĂN MINH – ỨNG XỬ ĐẸP</div>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase mb-2">THÔNG TIN LIÊN HỆ</h4>
+          <ul class="space-y-1.5 text-slate-300">
+            <li>📍 Địa chỉ: Số 90, Tổ 3, Phường Đức Xuân, Thành phố Bắc Kạn</li>
+            <li>📞 Điện thoại: 0869 550 490</li>
+            <li>✉️ Email: c2huyentung.backan@moet.edu.vn</li>
+            <li>🌐 Cổng thông tin: thcshuyentung.edu.vn</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white text-sm font-bold uppercase mb-2">QUẢN TRỊ VIÊN</h4>
+          <p class="text-slate-400 mb-2">Khu vực dành cho Ban Giám hiệu, giáo viên và cán bộ Đoàn Đội quản lý bài giảng, video và cấu hình giao diện.</p>
+          <button onclick="toggleLoginModal()" class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold transition-colors">
+            🔐 Đăng nhập Quản trị
+          </button>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-4 text-center text-slate-500 text-[11px]">
+        © 2026 TRƯỜNG THCS HUYỀN TỤNG. Bảo lưu mọi quyền.
+      </div>
+    </div>
+  </footer>
+
+  <!-- VIDEO POPUP MODAL -->
+  <div id="videoModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 rounded-3xl max-w-3xl w-full p-4 border border-slate-700 shadow-2xl">
+      <div class="flex items-center justify-between pb-3 px-2 border-b border-slate-800 text-white">
+        <h4 id="videoModalTitle" class="text-xs sm:text-sm font-bold truncate">Đang phát video tình huống</h4>
+        <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white font-bold text-lg px-2">✕</button>
+      </div>
+      <div class="aspect-video w-full mt-3 rounded-2xl overflow-hidden bg-black">
+        <iframe id="videoModalFrame" src="" class="w-full h-full border-0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGIN MODAL -->
+  <div id="loginModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 border border-slate-200 shadow-2xl space-y-4 text-slate-800">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+        <h4 class="font-extrabold text-sm uppercase text-slate-900">ĐĂNG NHẬP QUẢN TRỊ</h4>
+        <button onclick="toggleLoginModal()" class="text-slate-400 hover:text-slate-600 font-bold">✕</button>
+      </div>
+      <div class="p-3 bg-blue-50 rounded-xl text-xs text-blue-900 space-y-1">
+        <div><strong>Tài khoản mẫu để test:</strong></div>
+        <div>• Admin: <code>admin</code> / <code>Admin@123</code></div>
+        <div>• Biên tập: <code>bientap</code> / <code>Bientap@123</code></div>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold mb-1">Tên đăng nhập</label>
+          <input type="text" id="demoUser" value="admin" class="w-full px-3 py-2 border rounded-xl">
+        </div>
+        <div>
+          <label class="block font-bold mb-1">Mật khẩu</label>
+          <input type="password" id="demoPass" value="Admin@123" class="w-full px-3 py-2 border rounded-xl">
+        </div>
+        <button onclick="handleDemoLogin()" class="w-full py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-xl">
+          Đăng nhập hệ thống
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openVideoModal(url, title) {
+      document.getElementById('videoModalTitle').innerText = title;
+      document.getElementById('videoModalFrame').src = url;
+      document.getElementById('videoModal').classList.remove('hidden');
+    }
+    function closeVideoModal() {
+      document.getElementById('videoModalFrame').src = '';
+      document.getElementById('videoModal').classList.add('hidden');
+    }
+    function toggleLoginModal() {
+      const modal = document.getElementById('loginModal');
+      modal.classList.toggle('hidden');
+    }
+    function handleDemoLogin() {
+      alert('Đăng nhập thành công với tài khoản Quản trị viên (admin)! Trên máy chủ đầy đủ, bạn sẽ được chuyển tới Bảng điều khiển Quản trị: http://localhost:3000/admin');
+      toggleLoginModal();
+    }
+  </script>
+</body>
+</html>
